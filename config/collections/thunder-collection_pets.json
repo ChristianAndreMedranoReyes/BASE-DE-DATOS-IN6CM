@@ -1,0 +1,96 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "pets",
+    "collectionId": "6b578ace-9846-4bd5-9796-9df566eaa9cc",
+    "dateExported": "2025-02-11T17:13:31.210Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "ef926e25-aea9-48ad-b1c8-d9b9ce126dce",
+            "colId": "6b578ace-9846-4bd5-9796-9df566eaa9cc",
+            "containerId": "",
+            "name": "pets",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-02-05T17:31:54.356Z",
+            "modified": "2025-02-11T17:08:54.117Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FiODNjM2I4OGY5MTlmMGFkODZmNjEiLCJpYXQiOjE3MzkyOTM3MjUsImV4cCI6MTczOTI5NzMyNX0.DhI-Phf8rMmDqbvO3FOE0ZnzZeZ9T1J_gE9wpioOqxc"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"madrid\",\n  \"description\": \"perro leyenda\",\n  \"age\": \"5\",\n  \"type\": \"perro\",\n  \"email\": \"isavestruz@gmail.com\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "9b406cb3-f00f-4c46-92bc-d2f794438faa",
+            "colId": "6b578ace-9846-4bd5-9796-9df566eaa9cc",
+            "containerId": "",
+            "name": "delete pet",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets/67ab7779c5cf0f56d3987a27",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2025-02-11T17:01:20.973Z",
+            "modified": "2025-02-11T17:03:33.780Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FiODE1NWI4OGY5MTlmMGFkODZmM2QiLCJpYXQiOjE3MzkyOTMwMTksImV4cCI6MTczOTI5NjYxOX0.G486bxWJhK8Z4YGvFZJkDHh1X0S7OORjDVoQNG7Erak"
+                }
+            ]
+        },
+        {
+            "_id": "80a6e94e-6cc5-44c7-861e-745b56b8855f",
+            "colId": "6b578ace-9846-4bd5-9796-9df566eaa9cc",
+            "containerId": "",
+            "name": "update pet",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets/67ab7779c5cf0f56d3987a27",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2025-02-11T17:01:33.357Z",
+            "modified": "2025-02-11T17:04:21.677Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"ColoColo\",\n  \"description\": \"perro inca\",\n  \"age\": \"2\",\n  \"type\": \"perro\",\n  \"email\": \"isasa@gmail.com\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "1211deb0-37df-44c6-b177-1770aea30828",
+            "colId": "6b578ace-9846-4bd5-9796-9df566eaa9cc",
+            "containerId": "",
+            "name": "get by id pet",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets/67ab800bb88f919f0ad86f2d",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2025-02-11T17:02:05.363Z",
+            "modified": "2025-02-11T17:05:43.470Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FiODE1NWI4OGY5MTlmMGFkODZmM2QiLCJpYXQiOjE3MzkyOTMwMTksImV4cCI6MTczOTI5NjYxOX0.G486bxWJhK8Z4YGvFZJkDHh1X0S7OORjDVoQNG7Erak"
+                }
+            ]
+        },
+        {
+            "_id": "aa3e915a-b70e-414d-8ed2-fd3825ba894f",
+            "colId": "6b578ace-9846-4bd5-9796-9df566eaa9cc",
+            "containerId": "",
+            "name": "get all pets",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets/",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2025-02-11T17:02:12.731Z",
+            "modified": "2025-02-11T17:05:18.644Z",
+            "headers": []
+        }
+    ],
+    "ref": "ZF1dA1Cui57GixV80O7d1X5RTMo8XvYE6GWWqVuMTv3W3_VsFvls5oL-hbhkIV8-wc3qtUGMCGkiBmgh9RXy0w"
+}

@@ -9,9 +9,9 @@ export const dbConnection = async () => {
             mongoose.disconnect();
         });
         mongoose.connection.on('connecting', ()=>{
-            console.log('MongoDB | Try connecting');
+            console.log('MongoDB | Try Connecting');
         });
-        mongoose.connection.on('connected', ()=>{
+        mongoose.connection.on('Connected', ()=>{
             console.log('MongoDB | connected to MongoDB');
         });
         mongoose.connection.on('open', ()=>{

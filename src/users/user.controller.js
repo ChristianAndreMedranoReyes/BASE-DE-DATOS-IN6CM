@@ -25,7 +25,7 @@ export const getUsers = async (req = request, res = response) =>{
         })
     }
 }
- 
+
 export const getUserById = async (req, res)=>{
     try {
         const {id} = req.params;
@@ -53,13 +53,13 @@ export const getUserById = async (req, res)=>{
     }
 }
 
-export const  updateUser = async (req, res = response) => {
+export const updateUser = async (req, res = response) => {
     try {
-
+        
         const { id } = req.params;
         const { _id, password, email, ...data } = req.body;
 
-        if(password) {
+        if (password) {
             data.password = await hash(password)
         }
 
@@ -70,10 +70,10 @@ export const  updateUser = async (req, res = response) => {
             msg: 'Usuario Actualizado',
             user
         })
-        
+
     } catch (error) {
         res.status(500).json({
-            success: false,
+            sucess: false,
             msg: 'Error al actualizar usuario',
             error
         })
@@ -83,24 +83,49 @@ export const  updateUser = async (req, res = response) => {
 export const deleteUser = async (req, res) => {
     try {
         
-        const { id } = req.params;
+        const { id } = req.params
 
-        const user = await UserActivation.findByIdAndUpdate(id, { estado: false }, {new: true});
+        const user = await Usuario.findByIdAndUpdate( id, { estado: false }, { new: true })
 
-        const authencticatedUser = req.user;
+        const authenticatedUser = req.user;
 
         res.status(200).json({
-            sucess: true,
-            msg: "Usuario desactivado",
+            success: true,
+            msg: 'Usuario desacticvado',
             user,
-            authencticatedUser
+            authenticatedUser
         })
 
     } catch (error) {
         res.status(500).json({
-            sucess: false,
+            success: false,
             msg: 'Error al desactivar usuario',
             error
         })
     }
 }
+ 
+export const updatePassword = async ( req, res ) => {
+    try {
+        
+        const { id } = req.params;
+        const { _id, email, username, ...data } = req.body;
+        const encryptedPassword = await hash (data.password);
+
+        const user = await Usuario.findByIdAndUpdate(id, data, {new: true});
+
+        res.status(200).json({
+            success: true,
+            msg: 'Password Actualizado',
+            user
+        })
+
+    } catch (error) {
+        res.status(500).json({
+            sucess: false,
+            msg: 'Error al actualizar password',
+            error
+        })
+    }
+}
+

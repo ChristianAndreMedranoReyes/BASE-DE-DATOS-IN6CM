@@ -1,0 +1,33 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "appoinment",
+    "collectionId": "e9c44015-0858-4e97-96d6-81141db55c28",
+    "dateExported": "2025-02-11T17:13:41.842Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "1f0607e3-3aab-4bdc-83dc-40326124fe13",
+            "colId": "e9c44015-0858-4e97-96d6-81141db55c28",
+            "containerId": "",
+            "name": "savePet",
+            "url": "http://localhost:3000/adoptionSystem/v1/appoint/",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2025-02-11T16:07:14.618Z",
+            "modified": "2025-02-11T17:11:07.428Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2FiODNjM2I4OGY5MTlmMGFkODZmNjEiLCJpYXQiOjE3MzkyOTM3MjUsImV4cCI6MTczOTI5NzMyNX0.DhI-Phf8rMmDqbvO3FOE0ZnzZeZ9T1J_gE9wpioOqxc"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"veterinario\": \"Jorse\",\n  \"fecha\": \"2025-02-11\",\n  \"descripProblem\": \"escalofrios\",\n  \"pet\": \"madrid\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "ftU68750pih-VfNiGMijn1zb93ihAgwaxkSyVdRb9mEXWjIDlyYknkz86vJ1jYtKhUSYgcoR964wW5nmo0Fmmg"
+}

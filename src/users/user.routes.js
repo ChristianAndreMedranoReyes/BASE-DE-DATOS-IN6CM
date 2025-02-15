@@ -1,18 +1,20 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { getUsers, getUserById, updateUser, deleteUser } from "./user.controller.js";
+import { getUsers, getUserById, updateUser, deleteUser, updatePassword } from "./user.controller.js";
 import { existeUsuarioById } from "../helpers/db-validator.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
-import { uploadProfilePicture } from "../middlewares/multer-upload.js";
-
+import { uploadProfilePicture } from "../middlewares/multer-upload.js"
+import { validarJWT } from "../middlewares/validar-jwt.js";
+import { tieneRole } from '../middlewares/validar-roles.js'
+ 
 const router = Router();
-
+ 
 router.get("/", getUsers);
 
 router.get(
     "/findUser/:id",
     [
-        check("id", "No es un ID válido").isMongoId(),
+        check("id", "No es un ID valido").isMongoId(),
         check("id").custom(existeUsuarioById),
         validarCampos
     ],
@@ -21,9 +23,9 @@ router.get(
 
 router.put(
     "/:id",
-    uploadProfilePicture.single('profilePicture'),
+    uploadProfilePicture.single("profilePicture"),
     [
-        check("id", "No es un ID válido").isMongoId(),
+        check("id", "Mo es un ID valido").isMongoId(),
         check("id").custom(existeUsuarioById),
         validarCampos
     ],
@@ -33,11 +35,23 @@ router.put(
 router.delete(
     "/:id",
     [
-    check("id", "No es un ID válido").isMongoId(),
-    check("id").custom(existeUsuarioById),
-    validarCampos
+        validarJWT,
+        tieneRole("ADMIN_ROLE", "VENTAS_ROLE"),
+        check("id", "No es un ID valido").isMongoId(),
+        check("id").custom(existeUsuarioById),
+        validarCampos
     ],
-    deleteUser
+    deleteUser   
 )
 
+router.put(
+    "/:id",
+    [
+        check("id", "Mo es un ID valido").isMongoId(),
+        check("id").custom(existeUsuarioById),
+        validarCampos
+    ],
+    updatePassword
+)
+ 
 export default router;

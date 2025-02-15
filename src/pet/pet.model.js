@@ -16,20 +16,21 @@ const PetSchema = Schema({
     type: {
         type: String,
         uppercase: true,
-        require: true
+        required: true
     },
     keeper: {
         type: Schema.Types.ObjectId,
         ref: 'user',
-        require: true
+        required: true
     },
     status: {
         type: Boolean,
         default: true
     }
 }, {
-        timestamps: true,
-        versionKey: false
+    timeStamps: true,
+    versionKey: false
 });
+
 
 export default model('Pet', PetSchema);
