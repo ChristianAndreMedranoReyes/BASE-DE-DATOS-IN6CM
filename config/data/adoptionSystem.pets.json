@@ -1,52 +1,13 @@
-[{
-  "_id": {
-    "$oid": "67a3a3705472c3bb02b20e37"
-  },
-  "name": "Maz",
-  "description": "perro salchicha",
-  "age": 3,
-  "type": "PERRO",
-  "keeper": {
-    "$oid": "67a244820bd7687e31d28994"
-  },
-  "status": true
-},
 {
   "_id": {
-    "$oid": "67ab7779c5cf0f56d3987a27"
+    "$oid": "67b3e87277f0ce697e0e4830"
   },
-  "name": "ColoColo",
-  "description": "perro inca",
-  "age": 2,
+  "name": "Ponky",
+  "description": "perro husky",
+  "age": 6,
   "type": "PERRO",
   "keeper": {
-    "$oid": "67ab772fc5cf0f56d3987a22"
-  },
-  "status": false
-},
-{
-  "_id": {
-    "$oid": "67ab800bb88f919f0ad86f2d"
-  },
-  "name": "ColoColo",
-  "description": "perro pastor",
-  "age": 2,
-  "type": "PERRO",
-  "keeper": {
-    "$oid": "67ab772fc5cf0f56d3987a22"
+    "$oid": "67b3c6be7278e57670f4223c"
   },
   "status": true
-},
-{
-  "_id": {
-    "$oid": "67ab8426b88f919f0ad86f68"
-  },
-  "name": "madrid",
-  "description": "perro leyenda",
-  "age": 5,
-  "type": "PERRO",
-  "keeper": {
-    "$oid": "67ab83c3b88f919f0ad86f61"
-  },
-  "status": true
-}]
+}
